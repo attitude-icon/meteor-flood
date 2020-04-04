@@ -35,7 +35,7 @@ socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sent = int(0)
 timeout = time.time()+dur
 print
-while True and time.time()>timeout:
+while True and time.time()<timeout:
     clr()
     banner()
     try:
